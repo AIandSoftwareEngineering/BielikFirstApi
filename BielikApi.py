@@ -9,16 +9,16 @@ def chat_with_bielik():
     # Maintain conversation history across turns
     messages = []
 
-    print("--- Czat z Bielikiem (wpisz 'exit' lub 'q' aby zakończyć) ---")
+    print("--- Chat with Bielik (type 'exit' or 'q' to quit) ---")
 
     while True:
         try:
-            user_input = input("\nTy: ").strip()
+            user_input = input("\nYou: ").strip()
             if not user_input:
                 continue
 
             if user_input.lower() in ["exit", "q", "quit"]:
-                print("Do zobaczenia!")
+                print("Goodbye!")
                 break
 
             # Append user message to memory
@@ -48,11 +48,11 @@ def chat_with_bielik():
 
         except urllib.error.URLError as e:
             print(
-                f"\nBłąd połączenia z Ollama. Upewnij się, że usługa działa: {e}"
+                f"\nConnection error with Ollama. Make sure the service is running: {e}"
             )
             break
         except Exception as e:
-            print(f"\nWystąpił błąd: {e}")
+            print(f"\nAn error occurred: {e}")
 
 
 if __name__ == "__main__":
