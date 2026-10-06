@@ -8,6 +8,7 @@ def chat_with_bielik():
 
     # Maintain conversation history across turns
     messages = []
+    
 
     print("--- Chat with Bielik (type 'exit' or 'q' to quit) ---")
 
